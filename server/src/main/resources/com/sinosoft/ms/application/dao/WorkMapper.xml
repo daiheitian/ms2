@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sinosoft.ms.application.dao.WorkMapper">
+    <select id="selectCountByDept" resultType="com.sinosoft.ms.application.entity.WorkCheckVO">
+        select dept.name as department,
+               COUNT(1) as `count`,
+               SUM(if(finishStatus=3, 1, 0)) unFinish,
+               SUM(if(finishStatus=2, 1, 0)) finished,
+               SUM(if(finishStatus=1, 1, 0)) progress
+        from `work`
+        inner join department dept on wDepartment = dept.id
+        <where>
+            workYear = #{year}
+            <if test="month != null">
+                and workMouth = #{month}
+            </if>
+            <if test="roleId == '3'">
+                and wDepartment = #{department}
+            </if>
+            <if test="roleId == '2'">
+                and (wDepartment = #{department} or status = 1)
+            </if>
+        </where>
+        GROUP BY wDepartment
+        ORDER BY `count` DESC
+    </select>
+
+    <select id="staticCountByDept" resultType="com.sinosoft.ms.application.entity.WorkCheckVO">
+        select dept.name as department,
+        COUNT(1) as `count`,
+        SUM(if(finishStatus=3, 1, 0)) unFinish,
+        SUM(if(finishStatus=2, 1, 0)) finished,
+        SUM(if(finishStatus=1, 1, 0)) progress
+        from `work`
+        inner join department dept on wDepartment = dept.id
+        <where>
+            status = 1
+            <if test="year != null">
+                and workYear = #{year}
+            </if>
+            <if test="month != null">
+                and workMouth = #{month}
+            </if>
+            <if test="department != '' and department != null">
+                and wDepartment = #{department}
+            </if>
+        </where>
+        GROUP BY wDepartment
+        <if test="sort == 'unFinish' or sort == 'progress' or sort == 'finished'">
+            order by ${sort} ${sortType}
+        </if>
+    </select>
+
+    <select id="statistics" resultType="com.sinosoft.ms.application.entity.WorkStatisticsVO">
+        select dept.name,
+               sum(case when workType = 1 then 1 else 0 end) type1,
+               sum(case when workType = 2 then 1 else 0 end) type2,
+               sum(case when workType = 3 then 1 else 0 end) type3
+        from `work`
+            left join department dept on wDepartment = dept.id
+        <where>
+            <if test="year != null">
+                and workYear = #{year}
+            </if>
+            <if test="month != null">
+                and workMouth = #{month}
+            </if>
+            <if test="department != null">
+                and wDepartment = #{department}
+            </if>
+        </where>
+        group by dept.name
+        <if test="sort == 'type1' or sort == 'type2' or sort == 'type3'">
+            order by ${sort} ${sorttype}
+        </if>
+    </select>
+</mapper>
+

@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+  #热部署
+  thymeleaf:
+    cache: false
+  devtools:
+    restart:
+      enabled: true
+      additional-exclude: src/java/main
+      exclude: static/**,public/**,WEB-INF/**
+
+minio:
+  url: http://192.168.0.200:9000
+  accessKey: sinosoft
+  secretKey: sinosoft
+  bucket: ms
+#启动sql日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+ner:
+  url: http://127.0.0.1:8888
+
+security:
+  aes-key: ki8i0q8oqdgvtesr
+  private-key: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBALAvIBjCMLBV/ZLG7ZTRh56l2Yhj5GmTr7VSA4jEX0vfX1ZODtcirNhpEr3Z4P4c+POe1eKagd6Zdotq/hlxxdEK9wBfWmFHxjDG6ZV9RkCilw7sURj/ZEzQS3RJtXzdtu9fZNvo/w2nXam8PMUR+hrRui+McGaywveXZACukwd1AgMBAAECgYAYrhlMbpN8eCdD0tsAIFPjrO7qlLev9HDGMR1uoLeKvNkxkVCx4VkeHaXy81z5q9xR4Dus+SDdKlk5UX0T2mSv1qw3jn44dTVy43qZ+Ph3k2d1EAXX/aq0wPT/kI+2AoX78GLZI25+NCCnwwsm0P/dvzsbAnjMMbVBx7hekLTzMQJBAOY2S98pN2jeOTABZR82G/glIq2n1dAA7MbpSq/AD3fQaXOdg+PHaKQBqwFt6Y+C13TZZNsRZW1Zo2gTJu5BM80CQQDD630PI0Of6oQTvD5EJTyxRqVcdYj3rpkAZbswNdqlTDGO1+EKWDXxa06dgMv5LpZjZLW8J3P6CgSA51pbCkpJAkA+e+ZD/+/mKsri2L4Vpp4Y0BuFftRtzJJ3usJmyX5pSswUcWBm5qzkNv+vN6H5Lc5FDOxu+V3KPFY53VjnuhLRAkAsrWniZtdIA3HFEltcrOUvQ/33nLH0UXOAnLJYJx/KLBrtCRu/gSgj+qV9014wX8hZuCCdXJ3c+iXWw2tecXVJAkEApdJo5uKhC/aQwENcUIvgSRefsTlLtxpQthn6irzKquLqBHtjD5RiZbBt768AmpTuWIGRnlPMRb90TsS8RXUgLg==
+  public-key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwLyAYwjCwVf2Sxu2U0YeepdmIY+Rpk6+1UgOIxF9L319WTg7XIqzYaRK92eD+HPjzntXimoHemXaLav4ZccXRCvcAX1phR8YwxumVfUZAopcO7FEY/2RM0Et0SbV83bbvX2Tb6P8Np12pvDzFEfoa0bovjHBmssL3l2QArpMHdQIDAQAB

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sinosoft.ms.application.dao.UserMapper">
+    <select id="selectPage" resultType="com.sinosoft.ms.application.entity.UserEntity">
+        select u.*, d.name as departmentName
+        from user u
+          left join department d
+            on u.department = d.id
+        <where>
+            <if test="entity.username != null and entity.username != ''">
+                u.username like concat('%', #{entity.username}, '%')
+            </if>
+            <if test="entity.roleId != null">
+                and u.role_id = #{entity.roleId}
+            </if>
+            <if test="entity.jobNum != null and entity.jobNum != ''">
+                and u.job_num = #{entity.jobNum}
+            </if>
+            and u.deleted != 1
+        </where>
+        order by u.update_time desc, u.create_time desc
+    </select>
+</mapper>
+

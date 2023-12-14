@@ -1,0 +1,165 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+@import './theme.less';
+
+// antd 主题色
+@primary-color: @btn-color; // 
+@link-color: @main-link-color; // 链接色
+@success-color: #52c41a; // 成功色
+@warning-color: #faad14; // 警告色
+@error-color: #f5222d; // 错误色
+@font-size-base: 14px; // 主字号
+@heading-color: @side-text-color; // 标题色
+@text-color: @main-text-color; // 主文本色
+@text-color-secondary: @sub-text-color; // 次文本色
+@disabled-color: rgba(0, 0, 0, 0.25); // 失效色
+@border-radius-base: 2px; // 组件/浮层圆角
+// @border-color-base: @btn-text-color; // 边框色
+
+// @box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+//   0 9px 28px 8px rgba(0, 0, 0, 0.05); // 浮层阴影
+
+
+.ant-layout-header {
+  height: 64px;
+  padding: 0;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  // .ant-layout-sider {
+  //   min-height: 100vh;
+  // }
+
+  // override antd left sider .ant-menu,
+  // .ant-menu-submenu>.ant-menu {
+  //   background: #435067;
+  //   color: #e8f0ff;
+  // }
+
+  // .ant-menu-item>a {
+  //   color: #e8f0ff;
+  // }
+
+
+
+  // .ant-menu-light .ant-menu-item-selected>a,
+  // .ant-menu-light .ant-menu-item-selected>a:hover {
+  //   color: red !important;
+  // }
+
+  // .ant-layout-sider-dark {
+  //   background: #435067;
+  // }
+
+  // .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  //   background: #435067;
+  //   box-shadow: none;
+  // }
+
+  // .ant-menu.ant-menu-dark .ant-menu-item-selected,
+  // .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  //   background: red !important;
+  // }
+
+  // .ant-menu-item:hover,
+  // .ant-menu-item-active,
+  // .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+  // .ant-menu-submenu-active,
+  // .ant-menu-submenu-title:hover {
+  //   color: red !important;
+  // }
+
+
+  // // .ant-menu-submenu-selected {}
+
+  // .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item:hover,
+  // .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu:hover,
+  // .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-active,
+  // .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-active,
+  // .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-open,
+  // .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-open,
+  // .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected,
+  // .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected {
+  //   transition: none;
+  //   border-bottom: 0px !important;
+  // }
+
+
+  // //修改表头文字、背景颜色  
+  // .ant-table-thead>tr>th {
+  //   color: @main-text-color;
+  //   background: @table-header  !important;
+  // }
+
+  // //在鼠标悬浮时背景色展示在当前项非当前行
+  // .ant-table-tbody>tr {
+  //   background: rgba(255, 255, 255, 0) !important;
+  // }
+
+  // .ant-table-tbody>tr:hover {
+  //   background: @table-hover  !important;
+  // }
+
+  // //去除鼠标悬浮的背景色  
+  // .ant-table-tbody>tr>td {
+  //   background: rgba(255, 255, 255, 0) !important;
+  // }
+
+  // .ant-table-tbody>tr>td:hover {
+  //   background: rgba(255, 255, 255, 0) !important;
+  // }
+
+  // .ant-menu-dark .ant-menu-item:hover>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-item-active>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-submenu-active>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-submenu-open>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-submenu-title:hover>.ant-menu-submenu-title>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-item:hover>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-item-active>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-submenu-active>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-submenu-open>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-submenu-title:hover>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-item:hover>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-item-active>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-submenu-active>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-submenu-open>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-submenu-title:hover>.ant-menu-submenu-title>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-item:hover>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-item-active>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-submenu-active>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-submenu-open>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-submenu-title:hover>.ant-menu-submenu-title:hover>.ant-menu-submenu-arrow::before {
+  //   background-color: @btn-color-border  !important;
+  // }
+
+  // .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+  // .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+  // .ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
+  // .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::before,
+  // .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before,
+  // .ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before {
+  //   background-color: @btn-color-border  !important;
+  // }
+
+
+  // .ant-btn-primary {
+  //   color: @white-color;
+  //   background: @btn-color;
+  //   border-color: @btn-text-color;
+  //   text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+  //   -webkit-box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+  //   box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+  // }
+
+
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: @table-btn-link  !important;
+}

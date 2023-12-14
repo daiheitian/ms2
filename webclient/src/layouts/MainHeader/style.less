@@ -1,0 +1,61 @@
+@import '@styles/theme.less';
+
+.main-header {
+  background: @bg-header;
+  height: @header-height  !important;
+  line-height:@header-height  !important;
+
+  .user-info {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    background: @bg-header;
+    color: white;
+    .user-img {
+      vertical-align: middle;
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      border: 1px solid rgb(221, 221, 221);
+      background-size: cover;
+      display: inline-block;
+    }
+
+    .user-name {
+      color: @white-color;
+      margin-left: 10px;
+    }
+  }
+}
+
+.logo {
+  width: @logo-height;
+  height: @logo-height;
+  // background: url(../../assets/images/logo1.png) no-repeat;
+  float: left;
+  margin-left: 20px;
+  background-color: red;
+}
+
+.title {
+  margin-left: 20px;
+  color: white;
+  font-size: @font-size-large;
+}
+
+.sub1-header {
+  width: 100%;
+  height: 100%;
+  background-color: @bg-header  !important;
+}
+
+.sub2-header {
+  overflow: hidden;
+  height: 48px;
+  background-color: @bg-header  !important;
+}
+
+.subHeight {
+  height: 100%;
+}

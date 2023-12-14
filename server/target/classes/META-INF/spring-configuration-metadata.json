@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "minio",
+      "type": "com.sinosoft.ms.application.utils.FileUploader",
+      "sourceType": "com.sinosoft.ms.application.utils.FileUploader"
+    },
+    {
+      "name": "security",
+      "type": "com.sinosoft.ms.application.security.SecurityHelper",
+      "sourceType": "com.sinosoft.ms.application.security.SecurityHelper"
+    },
+    {
+      "name": "system.config",
+      "type": "com.sinosoft.ms.application.conf.SystemConfig",
+      "sourceType": "com.sinosoft.ms.application.conf.SystemConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "minio.access-key",
+      "type": "java.lang.String",
+      "sourceType": "com.sinosoft.ms.application.utils.FileUploader"
+    },
+    {
+      "name": "minio.bucket",
+      "type": "java.lang.String",
+      "sourceType": "com.sinosoft.ms.application.utils.FileUploader"
+    },
+    {
+      "name": "minio.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.sinosoft.ms.application.utils.FileUploader"
+    },
+    {
+      "name": "minio.url",
+      "type": "java.lang.String",
+      "sourceType": "com.sinosoft.ms.application.utils.FileUploader"
+    }
+  ],
+  "hints": []
+}
