@@ -25,7 +25,6 @@
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx ./src",
     "lint:fix": "yarn lint:js --fix"
-    
   },
   "lint-staged": {
     "gitDir": "../",

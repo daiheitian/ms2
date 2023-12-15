@@ -2,9 +2,9 @@ import React, { useEffect, useContext } from 'react';
 import { Input, Row, Col, Button, Form, Select } from 'antd';
 import { toJS } from 'mobx';
 import { observer } from 'mobx-react';
-import checkRule from '../../utils/checkRule';
-import Store from './store';
-import './style.less';
+import checkRule from '../../utilseckRule';
+import Store from '.ore';
+import '.yle.less';
 
 const { Option } = Select;
 const ModelContent = () => {
