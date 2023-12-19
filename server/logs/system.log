@@ -1,25 +1,21 @@
-2023-12-16 00:18:24,177 INFO [main] c.s.ms.application.Application [StartupInfoLogger.java : 55] Starting Application using Java 1.8.0_391 on MacBook-Air with PID 10498 (/Users/dhtian/Downloads/ms2/server/target/classes started by dhtian in /Users/dhtian/Downloads/ms2/server)
-2023-12-16 00:18:24,179 INFO [main] c.s.ms.application.Application [SpringApplication.java : 637] The following 1 profile is active: "dev"
-2023-12-16 00:18:24,666 INFO [main] o.s.cloud.context.scope.GenericScope [GenericScope.java : 283] BeanFactory id=353552ac-c9f8-3ee5-9182-87958a0dc902
-2023-12-16 00:18:24,872 WARN [main] io.undertow.websockets.jsr [Bootstrap.java : 68] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-12-16 00:18:24,881 INFO [main] io.undertow.servlet [ServletContextImpl.java : 388] Initializing Spring embedded WebApplicationContext
-2023-12-16 00:18:24,881 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 292] Root WebApplicationContext: initialization completed in 678 ms
-2023-12-16 00:18:25,457 INFO [main] o.s.s.web.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java : 55] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78da899f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e7b265e, org.springframework.security.web.context.SecurityContextPersistenceFilter@e3b0369, org.springframework.security.web.header.HeaderWriterFilter@3730f716, org.springframework.security.web.authentication.logout.LogoutFilter@3a7b2e2, com.sinosoft.ms.application.security.filter.AuthFilter@51da32e5, com.sinosoft.ms.application.security.filter.JwtFilter@33d60b7e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72443081, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@373052b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fecfaea, org.springframework.security.web.session.SessionManagementFilter@66f5a02e, org.springframework.security.web.access.ExceptionTranslationFilter@6579cdbb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@122635ef]
-2023-12-16 00:18:25,839 INFO [main] o.s.b.a.e.web.EndpointLinksResolver [EndpointLinksResolver.java : 58] Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-12-16 00:18:25,891 INFO [main] io.undertow [Undertow.java : 120] starting server: Undertow - 2.2.23.Final
-2023-12-16 00:18:25,894 INFO [main] org.xnio [Xnio.java : 95] XNIO version 3.8.7.Final
-2023-12-16 00:18:25,896 INFO [main] org.xnio.nio [NioXnio.java : 58] XNIO NIO Implementation Version 3.8.7.Final
-2023-12-16 00:18:25,909 INFO [main] org.jboss.threads [Version.java : 52] JBoss Threads version 3.1.0.Final
-2023-12-16 00:18:25,929 INFO [main] o.s.b.w.e.undertow.UndertowWebServer [UndertowWebServer.java : 119] Undertow started on port(s) 8081 (http) with context path '/ms'
-2023-12-16 00:18:25,939 INFO [main] c.s.ms.application.Application [StartupInfoLogger.java : 61] Started Application in 1.991 seconds (JVM running for 2.38)
-2023-12-16 00:18:25,975 INFO [RMI TCP Connection(3)-192.168.31.126] io.undertow.servlet [ServletContextImpl.java : 388] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-16 00:18:25,975 INFO [RMI TCP Connection(3)-192.168.31.126] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
-2023-12-16 00:18:25,975 INFO [RMI TCP Connection(2)-192.168.31.126] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 110] HikariPool-1 - Starting...
-2023-12-16 00:18:25,976 INFO [RMI TCP Connection(3)-192.168.31.126] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
-2023-12-16 00:18:25,977 WARN [RMI TCP Connection(2)-192.168.31.126] c.z.hikari.util.DriverDataSource [DriverDataSource.java : 70] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2023-12-16 00:18:26,087 INFO [RMI TCP Connection(2)-192.168.31.126] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 123] HikariPool-1 - Start completed.
-2023-12-16 00:20:02,651 INFO [XNIO-1 task-1] c.s.m.a.controller.HomeController [HomeController.java : 28] login
-2023-12-16 00:21:07,314 INFO [SpringApplicationShutdownHook] io.undertow [Undertow.java : 259] stopping server: Undertow - 2.2.23.Final
-2023-12-16 00:21:07,317 INFO [SpringApplicationShutdownHook] io.undertow.servlet [ServletContextImpl.java : 388] Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-12-16 00:21:07,323 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 350] HikariPool-1 - Shutdown initiated...
-2023-12-16 00:21:07,332 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 352] HikariPool-1 - Shutdown completed.
+2023-12-19 14:41:33,488 INFO [main] c.s.ms.application.Application [StartupInfoLogger.java : 55] Starting Application using Java 1.8.0_391 on MacBook-Air.local with PID 40188 (/Users/dhtian/Downloads/ms2/server/target/classes started by dhtian in /Users/dhtian/Downloads/ms2/server)
+2023-12-19 14:41:33,493 INFO [main] c.s.ms.application.Application [SpringApplication.java : 637] The following 1 profile is active: "dev"
+2023-12-19 14:41:34,108 INFO [main] o.s.cloud.context.scope.GenericScope [GenericScope.java : 283] BeanFactory id=353552ac-c9f8-3ee5-9182-87958a0dc902
+2023-12-19 14:41:34,342 WARN [main] io.undertow.websockets.jsr [Bootstrap.java : 68] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-12-19 14:41:34,350 INFO [main] io.undertow.servlet [ServletContextImpl.java : 388] Initializing Spring embedded WebApplicationContext
+2023-12-19 14:41:34,350 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 292] Root WebApplicationContext: initialization completed in 824 ms
+2023-12-19 14:41:34,908 INFO [main] o.s.s.web.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java : 55] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6be6931f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4125ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e3f2908, org.springframework.security.web.header.HeaderWriterFilter@64bebd55, org.springframework.security.web.authentication.logout.LogoutFilter@7d8cf9ac, com.sinosoft.ms.application.security.filter.AuthFilter@78da899f, com.sinosoft.ms.application.security.filter.JwtFilter@e7b265e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e3b0369, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52c9d3d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51da32e5, org.springframework.security.web.session.SessionManagementFilter@3730f716, org.springframework.security.web.access.ExceptionTranslationFilter@64aeaf29, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e593b08]
+2023-12-19 14:41:35,297 INFO [main] o.s.b.a.e.web.EndpointLinksResolver [EndpointLinksResolver.java : 58] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-19 14:41:35,353 INFO [main] io.undertow [Undertow.java : 120] starting server: Undertow - 2.2.23.Final
+2023-12-19 14:41:35,356 INFO [main] org.xnio [Xnio.java : 95] XNIO version 3.8.7.Final
+2023-12-19 14:41:35,358 INFO [main] org.xnio.nio [NioXnio.java : 58] XNIO NIO Implementation Version 3.8.7.Final
+2023-12-19 14:41:35,372 INFO [main] org.jboss.threads [Version.java : 52] JBoss Threads version 3.1.0.Final
+2023-12-19 14:41:35,394 INFO [main] o.s.b.w.e.undertow.UndertowWebServer [UndertowWebServer.java : 119] Undertow started on port(s) 8081 (http) with context path '/ms'
+2023-12-19 14:41:35,406 INFO [main] c.s.ms.application.Application [StartupInfoLogger.java : 61] Started Application in 2.146 seconds (JVM running for 2.573)
+2023-12-19 14:41:35,797 INFO [RMI TCP Connection(1)-127.0.0.1] io.undertow.servlet [ServletContextImpl.java : 388] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 14:41:35,797 INFO [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 525] Initializing Servlet 'dispatcherServlet'
+2023-12-19 14:41:35,797 INFO [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 110] HikariPool-1 - Starting...
+2023-12-19 14:41:35,798 INFO [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 547] Completed initialization in 1 ms
+2023-12-19 14:41:35,799 WARN [RMI TCP Connection(2)-127.0.0.1] c.z.hikari.util.DriverDataSource [DriverDataSource.java : 70] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2023-12-19 14:41:35,903 INFO [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 123] HikariPool-1 - Start completed.
+2023-12-19 14:42:24,384 INFO [XNIO-1 task-1] c.s.m.a.controller.HomeController [HomeController.java : 28] login

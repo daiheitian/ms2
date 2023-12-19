@@ -57,6 +57,7 @@ public class WorkController {
         IPage<WorkEntity> result = service.page(new Page<>(page, size), query);
         Date now = new Date();
         return ResponsePageData.success(result.getRecords().stream().map(r -> {
+
             if(r.getCreateTime() != null && r.getCreateTime().getYear() == now.getYear() &&
                     r.getCreateTime().getMonth() == now.getMonth()) {
                 r.setNew(true);
@@ -222,6 +223,8 @@ public class WorkController {
             } else {
                 query.orderByAsc(sort);
             }
+        }else{
+            query.orderByDesc("create_Time");
         }
 
         if(StringUtils.hasLength(workType)) {

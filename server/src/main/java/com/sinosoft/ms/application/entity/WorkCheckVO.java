@@ -9,4 +9,5 @@ public class WorkCheckVO {
     int unFinish;
     int finished;
     int progress;
+    int unknown;
 }

@@ -30,7 +30,8 @@
         COUNT(1) as `count`,
         SUM(if(finishStatus=3, 1, 0)) unFinish,
         SUM(if(finishStatus=2, 1, 0)) finished,
-        SUM(if(finishStatus=1, 1, 0)) progress
+        SUM(if(finishStatus=1, 1, 0)) progress,
+        SUM(if(finishStatus=is null, 1, 0)) unkonw
         from `work`
         inner join department dept on wDepartment = dept.id
         <where>
@@ -55,7 +56,8 @@
         select dept.name,
                sum(case when workType = 1 then 1 else 0 end) type1,
                sum(case when workType = 2 then 1 else 0 end) type2,
-               sum(case when workType = 3 then 1 else 0 end) type3
+               sum(case when workType = 3 then 1 else 0 end) type3,
+               sum(case when workType = 4 then 1 else 0 end) type4,
         from `work`
             left join department dept on wDepartment = dept.id
         <where>

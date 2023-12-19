@@ -91,6 +91,12 @@ const Page = () => {
         align: 'center',
         sorter: true
       },
+      {
+        title: '新增',
+        dataIndex: 'type4',
+        align: 'center',
+        sorter: true
+      },
     ],
     [pageStore],
   );

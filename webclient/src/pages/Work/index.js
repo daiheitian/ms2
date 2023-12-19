@@ -224,7 +224,7 @@ const work = () => {
       {
         title: '事务',
         dataIndex: 'workcontent',
-        render: (text, record) => <div>{text}{record.isNew&&<Icon component={NewSvg} />}</div>,
+        render: (text, record) => <div>{text}{record.new&&<Icon component={NewSvg} />}</div>,
       },
       {
         title: '状态',
@@ -271,6 +271,7 @@ const work = () => {
                 <Option value={1}>常规工作</Option>
                 <Option value={2}>重点工作</Option>
                 <Option value={3}>创新工作</Option>
+                <Option value={4}>新增工作</Option>
               </Select>
             </Form.Item>
             {user.roleId !== "3" && <Form.Item

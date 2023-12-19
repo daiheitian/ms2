@@ -63,6 +63,7 @@ const ModelContent = () => {
           <Radio value={1}>常规工作</Radio>
           <Radio value={2}>重点工作</Radio>
           <Radio value={3}>创新工作</Radio>
+          <Radio value={4}>新增工作</Radio>
         </Radio.Group>}
       </Form.Item>
       <Form.Item label="项目事务" name="workcontent">

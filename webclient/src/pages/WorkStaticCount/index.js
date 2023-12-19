@@ -76,6 +76,12 @@ const Page = () => {
         align: 'center',
         sorter: true
       },
+      {
+        title: '无',
+        dataIndex: 'unknown',
+        align: 'center',
+        sorter: true
+      },
     ],
     [pageStore],
   );

@@ -8,4 +8,5 @@ public class WorkStatisticsVO {
     Integer type1;
     Integer type2;
     Integer type3;
+    Integer type4;
 }
