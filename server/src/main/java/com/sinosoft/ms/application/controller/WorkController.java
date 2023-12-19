@@ -67,9 +67,10 @@ public class WorkController {
 
     @GetMapping("check")
     public ResponseData check() {
+        String roleId = SecurityHelper.getRole();
         LocalDate now = LocalDate.now();
         // 未到当前月的最后5天则不提醒
-        if(now.getMonth().maxLength() - now.getDayOfMonth() > 5) {
+        if(now.getMonth().maxLength() - now.getDayOfMonth() > 10 || "1".equals(roleId)) {
             return ResponseData.success(Arrays.asList());
         }
 
